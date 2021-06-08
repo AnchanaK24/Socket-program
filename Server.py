@@ -1,12 +1,12 @@
 import socket
 
-S=socket.socket()
-S.bind(('localhost',8080))
+server=socket.socket()
+server.bind(('localhost',8080))
 
-S.listen()
+server.listen()
 
 while True:
-    C,address = S.accept()
+    client,address = server.accept()
     print("connection with", address)
-    C.send(bytes('Hi', 'utf-8'))
-    C.close()
+    client.send(bytes('Hi', 'utf-8'))
+    client.close()
