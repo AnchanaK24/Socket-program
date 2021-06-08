@@ -1,7 +1,7 @@
 import socket
 
-C=socket.socket()
+client=socket.socket()
 
-C.connect(('localhost',8080))
+client.connect(('localhost',8080))
 
-print(C.recv(1024).decode())
+print(client.recv(1024).decode())
